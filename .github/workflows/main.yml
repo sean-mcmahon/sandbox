@@ -10,17 +10,11 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - name: Windows
-            extension: "*.dll"
-            runs-on: windows-latest
           - name: Linux
             extension: "*.so"
             runs-on: ubuntu-latest
-          - name: MacOS
-            extension: "*.dylib"
-            runs-on: macos-latest
         python: [3.6, 3.7, 3.8]
-        qt: [5.15.0]
+        qt: [5.13.0]
 
     steps:
       - name: Checkout
